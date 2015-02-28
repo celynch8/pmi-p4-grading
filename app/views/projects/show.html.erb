@@ -1,0 +1,34 @@
+<h1><%= @project.name %></h1>
+
+<h2><%= @project.show_student_pair %></h2>
+
+<div>
+<% if !@project.graded? %>
+	<i>*not graded yet!</i>
+<% end%>
+</div>
+
+<a href="/projects/<%=@project.id%>/edit">Edit</a><br><br>
+
+<a href="/projects/<%=@project.id%>/grade">Grade</a><br><br>
+
+
+
+	<%= @project.objective1 %> <br>
+	<%= @project.objective1_goal1 %> <br>
+	<%= @project.objective1_goal2 %> <br>
+	<%= @project.objective1_goal3 %> <br>
+	<%= @project.objective1_goal4 %> <br>
+
+	<%= @project.objective2 %> <br>
+	<%= @project.objective2_goal1 %> <br>
+	<%= @project.objective2_goal2 %> <br>
+	<%= @project.objective2_goal3 %> <br>
+	<%= @project.objective2_goal4 %> <br>
+
+
+	<%= @project.objective3 %> <br>
+	<%= @project.objective3_goal1 %> <br>
+	<%= @project.objective3_goal2 %> <br>
+	<%= @project.objective3_goal3 %> <br>
+	<%= @project.objective3_goal4 %> <br>

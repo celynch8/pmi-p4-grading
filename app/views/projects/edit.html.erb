@@ -1,0 +1,47 @@
+<h1>Let's put the students' project objectives and acceptance criteria in here</h1>
+
+<h2><%= "#{@project.name}: #{@project.show_student_pair}" %></h2>
+
+<%= form_for @project do |f| %>
+	<%= f.label :objective1, "Objective 1" %>:
+	<%= f.text_area :objective1 %> <br>
+	<%= f.label :objective1_goal1 %>:
+	<%= f.text_area :objective1_goal1 %> <br>
+	<%= f.label :objective1_goal2 %>:
+	<%= f.text_area :objective1_goal2 %> <br>
+	<%= f.label :objective1_goal3 %>:
+	<%= f.text_area :objective1_goal3 %> <br>
+	<%= f.label :objective1_goal4 %>:
+	<%= f.text_area :objective1_goal4 %> <br>
+
+	<%= f.label :objective2 %>:
+	<%= f.text_area :objective2 %> <br>
+	<%= f.label :objective2_goal1 %>:
+	<%= f.text_area :objective2_goal1 %> <br>
+	<%= f.label :objective2_goal2 %>:
+	<%= f.text_area :objective2_goal2 %> <br>
+	<%= f.label :objective2_goal3 %>:
+	<%= f.text_area :objective2_goal3 %> <br>
+	<%= f.label :objective2_goal4 %>:
+	<%= f.text_area :objective2_goal4 %> <br>
+
+
+	<%= f.label :objective3 %>:
+	<%= f.text_area :objective3 %> <br>
+	<%= f.label :objective3_goal1 %>:
+	<%= f.text_area :objective3_goal1 %> <br>
+	<%= f.label :objective3_goal2 %>:
+	<%= f.text_area :objective3_goal2 %> <br>
+	<%= f.label :objective3_goal3 %>:
+	<%= f.text_area :objective3_goal3 %> <br>
+	<%= f.label :objective3_goal4 %>:
+	<%= f.text_area :objective3_goal4 %> <br>
+
+	<%= f.submit %>
+
+<% end %>
+
+
+
+
+

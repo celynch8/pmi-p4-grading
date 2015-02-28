@@ -1,0 +1,12 @@
+<h1> Here are all the projects you need to grade</h1>
+
+<ul>
+	<% @projects.each do |p| %>
+		<li><a href="/projects/<%= p.id %>"><%= "#{p.name}: #{p.show_student_pair}" %></a>
+
+		<% if !p.graded? %>
+			<i>*not graded yet!</i>
+		<% end%>
+		</li>
+	<%end%>
+</ul>

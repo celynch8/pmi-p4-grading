@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+	<header>
+	  <div class="left-nav">
+	    <ul>
+	      <li><%= link_to "Projects List", projects_path %></li>
+	    </ul>
+	  </div>
+	 
+	  <div class="clearfix"></div>
+	</header>
+	<%= yield %>
 
 </body>
 </html>
