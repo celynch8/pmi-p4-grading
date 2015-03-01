@@ -8,27 +8,83 @@
 <% end%>
 </div>
 
-<a href="/projects/<%=@project.id%>/edit">Edit</a><br><br>
+<div>
+<a href="/projects/<%=@project.id%>/edit"><button>Edit</button></a>
 
-<a href="/projects/<%=@project.id%>/grade">Grade</a><br><br>
+<a href="/projects/<%=@project.id%>/grade"><button>Grade</button></a>
+</div>
 
+<div>
+	<h2>Deliverable #1</h2>
+		<% if @project.objective1 %>
+			<%= @project.objective1 %> <br>
 
+			<ul>
+				<li><%= @project.objective1_goal1 %> </li>
+				<li><%= @project.objective1_goal2 %> </li>
+				<li><%= @project.objective1_goal3 %> </li>
+				<li><i>Stretch Goal: </i><%= @project.objective1_goal4 %> </li>
+			</ul>
+			<% else %>
+				Not yet entered!
+		<% end %>
+		<p>
+			<% if @project.objective1_score %>
+				<b>Deliverable 1 Score: </b><%=@project.objective1_score%><br>
+				<b>Deliverable 1 Feedback:</b><br>
+				<%=@project.objective1_feedback%>
+			<% else %>
+				Not yet graded!
+			<% end %>
+		</p>
+</div>
 
-	<%= @project.objective1 %> <br>
-	<%= @project.objective1_goal1 %> <br>
-	<%= @project.objective1_goal2 %> <br>
-	<%= @project.objective1_goal3 %> <br>
-	<%= @project.objective1_goal4 %> <br>
+<div>
+	<h2>Deliverable #2</h2>
+		<% if @project.objective2 %>
+			<%= @project.objective2 %> <br>
 
-	<%= @project.objective2 %> <br>
-	<%= @project.objective2_goal1 %> <br>
-	<%= @project.objective2_goal2 %> <br>
-	<%= @project.objective2_goal3 %> <br>
-	<%= @project.objective2_goal4 %> <br>
+			<ul>
+				<li><%= @project.objective2_goal1 %> </li>
+				<li><%= @project.objective2_goal2 %> </li>
+				<li><%= @project.objective2_goal3 %> </li>
+				<li><i>Stretch Goal: </i><%= @project.objective2_goal4 %> </li>
+			</ul>
+			<% else %>
+				Not yet entered!
+		<% end %>
+		<p>
+			<% if @project.objective2_score %>
+				<b>Deliverable 2 Score: </b><%=@project.objective2_score%><br>
+				<b>Deliverable 2 Feedback:</b><br>
+				<%=@project.objective2_feedback%>
+			<% else %>
+				Not yet graded!
+			<% end %>
+		</p>
+</div>
 
+<div>
+	<h2>Deliverable #3</h2>
+		<% if @project.objective3 %>
+			<%= @project.objective3 %> <br>
 
-	<%= @project.objective3 %> <br>
-	<%= @project.objective3_goal1 %> <br>
-	<%= @project.objective3_goal2 %> <br>
-	<%= @project.objective3_goal3 %> <br>
-	<%= @project.objective3_goal4 %> <br>
+			<ul>
+				<li><%= @project.objective3_goal1 %> </li>
+				<li><%= @project.objective3_goal2 %> </li>
+				<li><%= @project.objective3_goal3 %> </li>
+				<li><i>Stretch Goal: </i><%= @project.objective3_goal4 %> </li>
+			</ul>
+			<% else %>
+				Not yet entered!
+		<% end %>
+		<p>
+			<% if @project.objective3_score %>
+				<b>Deliverable 3 Score: </b><%=@project.objective3_score%><br>
+				<b>Deliverable 3 Feedback:</b><br>
+				<%=@project.objective3_feedback%>
+			<% else %>
+				Not yet graded!
+			<% end %>
+		</p>
+</div>
