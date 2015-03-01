@@ -1,6 +1,48 @@
 <h1> Here is the project you need to grade right now</h1>
 
-<h2>
-<%= "#{@project.name}: #{@project.show_student_pair}" %>
-</h2>
+<h2><%= "#{@project.name}: #{@project.show_student_pair}" %></h2>
+
+<%= form_for @project do |f| %>
+	<div>
+		<h2> Deliverable 1</h2>
+		<%= @project.objective1 %><br>
+		Goal 1: <%= @project.objective1_goal1 %><br>
+		Goal 2: <%= @project.objective1_goal2 %><br>
+		Goal 3: <%= @project.objective1_goal3 %><br>
+		Stretch Goal: <%= @project.objective1_goal4 %><br><br>
+		Score:
+		<%= f.select :objective1_score, options_for_select([[0,'0'],[1,'1'],[2,'2'], [3,'3']]) %> <br>
+		<%= f.label :objective1_feedback, "Feedback" %>: <br>
+		<%= f.text_area :objective1_feedback , size: '60x6' %> <br>
+	</div>
+
+	<div>
+		<h2> Deliverable 2</h2>
+		<%= @project.objective2 %><br>
+		Goal 1: <%= @project.objective2_goal1 %><br>
+		Goal 2: <%= @project.objective2_goal2 %><br>
+		Goal 3: <%= @project.objective2_goal3 %><br>
+		Stretch Goal: <%= @project.objective2_goal4 %><br><br>
+		Score:
+		<%= f.select :objective2_score, options_for_select([[0,'0'],[1,'1'],[2,'2'], [3,'3']]) %> <br>
+		<%= f.label :objective2_feedback, "Feedback" %>: <br>
+		<%= f.text_area :objective2_feedback , size: '60x6' %> <br>
+	</div>
+
+	<div>
+		<h2> Deliverable 3</h2>
+		<%= @project.objective3 %><br>
+		Goal 1: <%= @project.objective3_goal1 %><br>
+		Goal 2: <%= @project.objective3_goal2 %><br>
+		Goal 3: <%= @project.objective3_goal3 %><br>
+		Stretch Goal: <%= @project.objective3_goal4 %><br><br>
+		Score:
+		<%= f.select :objective3_score, options_for_select([[0,'0'],[1,'1'],[2,'2'], [3,'3']]) %> <br>
+		<%= f.label :objective3_feedback, "Feedback" %>: <br>
+		<%= f.text_area :objective3_feedback , size: '60x6' %> <br>
+	</div>
+
+	<%= f.submit %>
+
+<% end %>
 
